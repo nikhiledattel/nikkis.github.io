@@ -11,7 +11,7 @@ h2,
 h3,
 h4,
 h6 {
-  margin-bottom: 20px;	
+  /*margin-bottom: 20px;	*/
   font-weight: 600;
   color: #2c2c2c;
   /*font-family: 'Poppins', sans-serif;	*/
@@ -31,28 +31,29 @@ h2 {
 h3 {
   font-size: 27px;
   line-height: 1.4;
+  margin-bottom: 12px;
 }
 h4 {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 1.4;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   font-weight: 500;
 }
 h5 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
-  font-weight: 400;
-  margin-bottom: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
 }
 p{
   font-size: 15px;
   color: #525252;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   line-height: 1.5;
 }
 
 .small{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 
@@ -79,7 +80,7 @@ p{
     margin-left: -40px;
     margin-right: -40px;
     padding: 0px 20px;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 }
 
 
@@ -87,7 +88,10 @@ p{
 .rounded{
     border-radius: .5rem!important;
 }
-
+.rounded-top{
+    border-top-left-radius: .5rem!important;
+    border-top-right-radius: .5rem!important;
+}
 
 
 /*Full page carousel with carousel based navigation*/
@@ -438,7 +442,7 @@ p{
     column-count: 2;
     -webkit-column-gap: 12px;
     -moz-column-gap: 12px;
-    column-gap: 12px;
+    column-gap: 20px;
     orphans: 1;
     widows: 1;    
 }
@@ -452,6 +456,7 @@ p{
 }
 .box-link .link{
     display: block;
-    padding: 5px 14px;
+    padding: 6px 12px;
     color: #3c3c3c;
+    font-size: 14px;
 }

@@ -464,3 +464,16 @@ p{
     color: #3c3c3c;
     font-size: 14px;
 }
+
+
+
+/*Fullpage Customizaion for mobile*/
+html.fp-enabled, .fp-enabled body{
+    margin: 0 auto;
+}
+.fp-container{
+    width: 100%;
+    position: relative;
+    padding: 0 40px;    
+}
+

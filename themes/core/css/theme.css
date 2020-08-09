@@ -561,8 +561,8 @@ html.fp-enabled, .fp-enabled body{
 }
 
 .pt-page-moveFromRight {
-    -webkit-animation: moveFromRight .45s ease both;
-    animation: moveFromRight .45s ease both;
+    -webkit-animation: moveFromRight .45s cubic-bezier(.26,.81,.69,.88) both;
+    animation: moveFromRight .45s cubic-bezier(.26,.81,.69,.88) both;
 }
 @-webkit-keyframes moveFromRight {
     from { -webkit-transform: translateX(100%); }
@@ -572,8 +572,8 @@ html.fp-enabled, .fp-enabled body{
 }
 
 .pt-page-movetoRight {
-    -webkit-animation: movetoRight .45s ease both;
-    animation: movetoRight .45s ease both;
+    -webkit-animation: movetoRight .45s cubic-bezier(.26,.81,.69,.88) both;
+    animation: movetoRight .45s cubic-bezier(.26,.81,.69,.88) both;
 }
 @-webkit-keyframes movetoRight {
     from { }

@@ -499,6 +499,13 @@ html.fp-enabled, .fp-enabled body{
 .top-page.page-on-top{
     z-index: 1000;
     opacity: 1;
+    overflow: auto;
+    -ms-overflow-style: none; /* IE 11 */
+    overflow: -moz-scrollbars-none /* Firefox */
+    scrollbar-width: none; /* Firefox 64 */      
+}
+.top-page.page-on-top::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 .default-page.fadeOut{
     opacity: 0;

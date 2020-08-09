@@ -24,7 +24,7 @@
 			</div>
 	  	</header>
 
-		<div class="d-flex justify-content-center first-cont">
+		<div class="d-flex justify-content-center first-cont default-page">
 
 			<div class="m-container">
 
@@ -118,6 +118,12 @@
 		</div>
 	
 
+		<div class="top-page">
+			
+		</div>
+
+
+
 		<!-- Modal -->
 
 		<div class="modal fade align-items-center slide-from-below" id="menu-modal" tabindex="-1" role="dialog" data-backdrop="true" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -171,11 +177,11 @@
 	    <footer>
 			<div class="fixed-bottom bottom-navbar">
 				<ul class="family scroll-with-center-align">
-				  <li class="child">
-				    <a class="link" id="one" href="#">Home</a>
+				  <li class="childs">
+				    <a class="link detail-lateral" id="ones" href="#">Home|Detail Lateral</a>
 				  </li>
-				  <li class="child">
-				    <a class="link" id="two" href="#">About</a>
+				  <li class="childs back-btn">
+				    <a class="link" id="twos" href="#">About</a>
 				  </li>
 				  <li class="child">
 				    <a class="link" id="three" href="#">Broken Bits</a>
@@ -193,5 +199,50 @@
 	<script src='https://unpkg.com/flickity-fade@1/flickity-fade.js'></script>    
     <script src="radiance/core/js/radiance.js" type="text/javascript"></script>
     <script src="themes/core/js/theme.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		var $defaultpage 	= $('.default-page'),
+			$toppage 		= $('.top-page');
+
+		$('.detail-lateral').on('click',function(e){
+			e.preventDefault();
+			$defaultpage.addClass('Zoomout').removeClass('page-scaleUpfromHide');
+		  	$toppage.addClass('animation-delay page-on-top pt-page-moveFromRight');
+	  		$toppage.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+		  		function() {   
+		  			// if( ($(e.target).attr('id') == 'mob-change') || ($(e.target).attr('id') == 'email-change') )
+			  			// {
+			  				// $('.back-button').fadeIn();  			
+			  			// }				
+	  		 		$toppage.removeClass('pt-page-moveFromRight animation-delay');
+					$defaultpage.removeClass('Zoomout');
+		  		});
+		});
+
+
+		$('.back-btn').on('click', function (e) {
+
+			e.preventDefault();
+			
+			//$('.sidebar').removeClass('Zoomout');
+			
+			$toppage.addClass('pt-page-movetoRight');		
+			$defaultpage.addClass('Zoomin animation-delay');
+			
+	  		$toppage.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+	  		function() {    
+					$defaultpage.removeClass('Zoomin animation-delay');
+	  		 		$toppage.removeClass('page-on-top pt-page-movetoRight');
+	  		});
+		});
+
+
+	});
+
+</script>
+
 
 </html>

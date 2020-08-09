@@ -530,7 +530,7 @@ html.fp-enabled, .fp-enabled body{
 }
 @keyframes zoomout {
     from {-webkit-transform: scale(1); transform: scale(1);}
-    to { opacity:1 ; -webkit-transform: scale(0.98); transform: scale(0.98); }
+    to { opacity:1; -webkit-transform: scale(0.98); transform: scale(0.98); }
 }
 
 .Zoomin {
@@ -561,8 +561,8 @@ html.fp-enabled, .fp-enabled body{
 }
 
 .pt-page-moveFromRight {
-    -webkit-animation: moveFromRight .45s cubic-bezier(.17,.67,13,.67) both;
-    animation: moveFromRight .45s cubic-bezier(.17,.67,13,.67) both;
+    -webkit-animation: moveFromRight .45s ease-out both;
+    animation: moveFromRight .45s ease-out both;
 }
 @-webkit-keyframes moveFromRight {
     from { -webkit-transform: translateX(100%); }
@@ -572,8 +572,8 @@ html.fp-enabled, .fp-enabled body{
 }
 
 .pt-page-movetoRight {
-    -webkit-animation: movetoRight .45s cubic-bezier(.17,.67,13,.67) both;
-    animation: movetoRight .45s cubic-bezier(.17,.67,13,.67) both;
+    -webkit-animation: movetoRight .45s ease-out both;
+    animation: movetoRight .45s ease-out both;
 }
 @-webkit-keyframes movetoRight {
     from { }

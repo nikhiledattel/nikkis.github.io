@@ -216,7 +216,8 @@
 		  			// if( ($(e.target).attr('id') == 'mob-change') || ($(e.target).attr('id') == 'email-change') )
 			  			// {
 			  				// $('.back-button').fadeIn();  			
-			  			// }				
+			  			// }
+			  		$('body').css('overflow', 'hidden');				
 	  		 		$toppage.removeClass('pt-page-moveFromRight animation-delay');
 					$defaultpage.removeClass('Zoomout');
 		  		});
@@ -231,9 +232,10 @@
 			
 			$toppage.addClass('pt-page-movetoRight');		
 			$defaultpage.addClass('Zoomin animation-delay');
-			
+			$('body').css('overflow', 'auto');
 	  		$toppage.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
-	  		function() {    
+	  		function() {
+
 					$defaultpage.removeClass('Zoomin animation-delay');
 	  		 		$toppage.removeClass('page-on-top pt-page-movetoRight');
 	  		});

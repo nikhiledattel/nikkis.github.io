@@ -37,7 +37,7 @@
 
 				<h4>Architecture</h4>
 				<div class="normalize-container">
-					<img class="img-fluid rounded has-detail" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+					<img class="img-fluid rounded has-detail" data="auto" src="themes/images/elizeu-dias-613494-unsplash.jpg">
 				</div>
 
 
@@ -118,25 +118,19 @@
 		</div>
 	
 
-		<div class="top-page">
-			
+		<div class="top-page">			
 			<div class="d-flex justify-content-center first-cont ">
-
 				<div class="m-container">
-
 					<h3>Architecture</h3>
 					<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt labore.</p>
 					<!-- <div class="normalize-container">
 						<img class="img-fluid rounded" src="themes/images/elizeu-dias-613494-unsplash.jpg">
 					</div> -->
-
 					<h4>Architecture</h4>
 					<div class="normalize-container">
 						<img class="img-fluid rounded default-page" src="themes/images/elizeu-dias-613494-unsplash.jpg">
 					</div>
-
-
 					<h4>Landscaping</h4>
 					<div class="normalize-container">
 						<div class="card-columns box-link">
@@ -155,12 +149,8 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</div>
-
-
 
 		<!-- Modal -->
 
@@ -243,42 +233,44 @@
 	$(document).ready(function(){
 
 		var $hasdetail 	= $('.has-detail'),
-			$toppage 		= $('.top-page');
+			$toppage 	= $('.top-page');
+
+			$hasdetail.on('click', function(){
+				//$(this).attr('data')
+				 $.ajax({
+				        url: $(this).attr('data')+'.html',
+				        type: 'GET',
+				        //data: yourData,
+				        datatype: 'html',
+				        success: function (data) { console.log(data); },
+				        error: function (jqXHR, textStatus, errorThrown) { console.log('fa'); }
+				    });				
+			});
+
 
 		$('.detail-lateral').on('click',function(e){
 			e.preventDefault();
 			$hasdetail.addClass('Zoomout').removeClass('page-scaleUpfromHide');
 		  	$toppage.addClass('animation-delay page-on-top pt-page-moveFromRight');
-	  		$toppage.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
-		  		function() {   
-		  			// if( ($(e.target).attr('id') == 'mob-change') || ($(e.target).attr('id') == 'email-change') )
-			  			// {
-			  				// $('.back-button').fadeIn();  			
-			  			// }
+	  		$toppage.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+	  		function() {
 			  		$('body').css('overflow', 'hidden');
 	  		 		$toppage.removeClass('pt-page-moveFromRight animation-delay');
 					$hasdetail.removeClass('Zoomout');
-		  		});
+	  		});
 		});
 
-
 		$('.back-btn').on('click', function (e) {
-
-			e.preventDefault();
-			
-			//$('.sidebar').removeClass('Zoomout');
-			
-			$toppage.addClass('pt-page-movetoRight');		
-			$hasdetail.addClass('Zoomin animation-delay');
-			
-	  		$toppage.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+			e.preventDefault();						
+			$toppage.addClass('pt-page-movetoRight');
+			$hasdetail.addClass('Zoomin animation-delay');			
+	  		$toppage.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 	  		function() {
-	  				$('body').css('overflow', 'auto');    
+	  				$('body').css('overflow', 'auto');
 					$hasdetail.removeClass('Zoomin animation-delay');
 	  		 		$toppage.removeClass('page-on-top pt-page-movetoRight');
 	  		});
 		});
-
 
 	});
 

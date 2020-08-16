@@ -113,7 +113,7 @@ body {
   width: 100%;
   position: relative;
   padding: 0 40px;
-  margin: 50px 0 50px;
+  margin: 0px 0 50px;
 }
 
 /*--------------------------------sidebar--------------------------------*/
@@ -127,8 +127,8 @@ body {
 /*logo-bar*/
 .logo-bar{
     padding: 11px 0;
-    background-color: #fff;
-    opacity: .9;
+    /*background-color: #fff;*/
+    /*opacity: .9;*/
 }
 .logo-bar .m-logo{
     height: 28px;

@@ -14,7 +14,7 @@
 
 	<body class="" data="">
 
-	    <header>
+	    <header class="d-none">
 			<div class="fixed-top">
 				<div class="logo-bar">
 				    <a class="link" id="one" href="#">
@@ -27,6 +27,12 @@
 		<div class="d-flex justify-content-center first-cont default-page">
 
 			<div class="m-container">
+				
+				<h4 class="first-cont">Architecture is a wonderful thing to watch and learn</h4>
+
+			  	<div class="full-width-container">
+			  		<img id="loadtest" class="img-fluid img-intro img-cover qwkload" src="themes/images/elizeu-dias-613494-unsplash-min.jpg">
+			  	</div>
 
 				<h3>Architecture</h3>
 				<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -230,7 +236,21 @@
 
 <script type="text/javascript">
 	
+
+
 	$(document).ready(function(){
+
+		// var img = document.getElementsByClassName('qwkload'); // for multiple objects
+		var img = document.getElementById('loadtest');
+		var realimage = document.createElement('img');
+
+		realimage.onload = function(){
+			img.src = this.src;			
+			img.className = img.className.replace(/\bqwkload\b/g, "realimageloaded");
+		}
+		setTimeout(function(){
+			realimage.src = "themes/images/elizeu-dias-613494-unsplash.jpg";
+		},50);
 
 		var $hasdetail 	= $('.has-detail'),
 			$toppage 	= $('.top-page');
@@ -243,7 +263,7 @@
 				        //data: yourData,
 				        datatype: 'html',
 				        success: function (data) { console.log(data); },
-				        error: function (jqXHR, textStatus, errorThrown) { console.log('fa'); }
+				        error: function (jqXHR, textStatus, errorThrown) { console.log('Sorry! Things didn\'t work as expected'); }
 				    });				
 			});
 

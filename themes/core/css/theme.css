@@ -57,6 +57,10 @@ p{
 }
 
 
+header{
+    height: 50px;
+}
+
 /*active-content-area*/
 
 .active-content-area{    
@@ -82,7 +86,11 @@ p{
     padding: 0px 20px;
     margin-bottom: 28px;
 }
-
+.full-width-container{
+    margin-left: -40px;
+    margin-right: -40px;    
+    margin-bottom: 28px;
+}
 
 /*rounded corners*/
 .rounded{
@@ -91,6 +99,12 @@ p{
 .rounded-top{
     border-top-left-radius: .5rem!important;
     border-top-right-radius: .5rem!important;
+}
+
+/*cover image*/
+
+.img-cover{
+    object-fit: cover;
 }
 
 
@@ -143,6 +157,13 @@ p{
 
 }
 
+
+/*image containers*/
+
+.img-intro{
+    height: 300px;
+    width:100%;
+}
 
 
 /*scrolling-wrapper*/
@@ -478,6 +499,16 @@ html.fp-enabled, .fp-enabled body{
     padding: 0 40px;    
 }
 
+
+/*image loading*/
+
+.qwkload{
+    filter: blur(2px);
+    transition: blur 1s;
+}
+.realimageloaded{
+    transition: blur 2s;
+}
 
 
 /*Page Transitions*/

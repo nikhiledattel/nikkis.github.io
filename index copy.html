@@ -238,9 +238,6 @@
 	
 
 
-	$(document).ready(function(){
-
-		// var img = document.getElementsByClassName('qwkload'); // for multiple objects
 		var img = document.getElementById('loadtest');
 		var realimage = document.createElement('img');
 
@@ -251,6 +248,13 @@
 		setTimeout(function(){
 			realimage.src = "themes/images/elizeu-dias-613494-unsplash.jpg";
 		},50);
+
+
+
+	$(document).ready(function(){
+
+		// var img = document.getElementsByClassName('qwkload'); // for multiple objects
+
 
 		var $hasdetail 	= $('.has-detail'),
 			$toppage 	= $('.top-page');

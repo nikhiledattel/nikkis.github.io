@@ -241,15 +241,15 @@
 	
 
 
-	// var img = document.getElementById('loadtest');
-	// var realimage = document.createElement('img');
-	// realimage.onload = function(){
-	// 	img.src = this.src;			
-	// 	img.className = img.className.replace(/\bqwkload\b/g, "realimageloaded");
-	// }
-	// setTimeout(function(){
-	// 	realimage.src = "themes/images/elizeu-dias-613494-unsplash.jpg";
-	// },50);
+	var img = document.getElementById('loadtest');
+	var realimage = document.createElement('img');
+	realimage.onload = function(){
+		img.src = this.src;			
+		img.className = img.className.replace(/\bqwkload\b/g, "realimageloaded");
+	}
+	setTimeout(function(){
+		realimage.src = "themes/images/elizeu-dias-613494-unsplash.jpg";
+	},50);
 
 
 

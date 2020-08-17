@@ -46,10 +46,10 @@ h5 {
   font-weight: 500;
 }
 p{
-  font-size: 15px;
+  font-size: 17px;
   color: #525252;
   margin-bottom: 28px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .small{
@@ -178,7 +178,7 @@ header{
 }
 .scrolling-wrapper .desc{
     padding: 20px 20px 0px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 /*per-50*/

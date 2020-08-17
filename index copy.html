@@ -24,16 +24,16 @@
 			</div>
 	  	</header>
 
-		<div class="d-flex justify-content-center first-cont default-page">
+		<div class="d-flex justify-content-center default-page">
 
 			<div class="m-container">
 				
 				<h4 class="first-cont">Architecture is a wonderful thing to watch and learn</h4>
 
 
-
 			  	<div class="full-width-container">
-			  		<img id="loadtest" class="img-fluid img-intro img-cover qwkload" src="themes/images/elizeu-dias-613494-unsplash-min.jpg">
+			  		<img id="loadtest" class="img-fluid img-intro img-cover" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+			  		<!-- <img id="loadtest" class="img-fluid img-intro img-cover qwkload" src="themes/images/elizeu-dias-613494-unsplash.jpg"> -->
 			  	</div>
 
 
@@ -241,15 +241,15 @@
 	
 
 
-	var img = document.getElementById('loadtest');
-	var realimage = document.createElement('img');
-	realimage.onload = function(){
-		img.src = this.src;			
-		img.className = img.className.replace(/\bqwkload\b/g, "realimageloaded");
-	}
-	setTimeout(function(){
-		realimage.src = "themes/images/elizeu-dias-613494-unsplash.jpg";
-	},50);
+	// var img = document.getElementById('loadtest');
+	// var realimage = document.createElement('img');
+	// realimage.onload = function(){
+	// 	img.src = this.src;			
+	// 	img.className = img.className.replace(/\bqwkload\b/g, "realimageloaded");
+	// }
+	// setTimeout(function(){
+	// 	realimage.src = "themes/images/elizeu-dias-613494-unsplash.jpg";
+	// },50);
 
 
 

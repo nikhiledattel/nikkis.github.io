@@ -1,6 +1,6 @@
 /*Theme styles including the products*/ 
 
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');*/
 
 
 
@@ -14,7 +14,7 @@ h6 {
   /*margin-bottom: 20px;	*/
   font-weight: 600;
   color: #2c2c2c;
-  font-family: 'Poppins', sans-serif;	
+  /*font-family: 'Poppins', sans-serif;	*/
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -161,7 +161,7 @@ header{
 /*image containers*/
 
 .img-intro{
-    height: 190px;
+    height: 280px;
     width:100%;
 }
 

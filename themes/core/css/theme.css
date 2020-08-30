@@ -95,10 +95,12 @@ header{
 /*rounded corners*/
 .rounded{
     border-radius: .5rem!important;
+    overflow: hidden;
 }
 .rounded-top{
     border-top-left-radius: .5rem!important;
     border-top-right-radius: .5rem!important;
+    overflow: hidden;    
 }
 
 /*cover image*/

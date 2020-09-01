@@ -45,8 +45,8 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: .7;
-    filter: blur(500px);
+    opacity: .2;
+    filter: blur(80px);
   }
 </style>
 
@@ -159,7 +159,8 @@
       var myFullpage = new fullpage('#fullpage', {
           verticalCentered: true,
           scrollingSpeed: 200,
-          touchSensitivity: 2,
+          touchSensitivity: 1,
+          fitToSectionDelay: 600,
           afterLoad: function(){
             document.getElementsByTagName("BODY")[0].style.visibility = "visible";
           }

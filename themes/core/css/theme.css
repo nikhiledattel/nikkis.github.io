@@ -31,12 +31,12 @@ h2 {
 h3 {
   font-size: 27px;
   line-height: 1.4;
-  margin-bottom: 12px;
+  margin-bottom: 26px;
 }
 h4 {
   font-size: 21px;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   /*letter-spacing: -0.08px;*/
 }
 h5 {
@@ -58,7 +58,7 @@ p{
 
 
 header{
-    height: 50px;
+    /*height: 50px;*/
 }
 
 /*active-content-area*/
@@ -84,12 +84,12 @@ header{
     margin-left: -40px;
     margin-right: -40px;
     padding: 0px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 .full-width-container{
     margin-left: -40px;
     margin-right: -40px;    
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 /*rounded corners*/
@@ -179,19 +179,20 @@ header{
     padding: 0 20px 20px; 
 }
 .scrolling-wrapper .desc{
-    padding: 20px 20px 0px;
+    padding: 15px 20px 0px;
     font-size: 15px;
+    line-height: 1.6;
 }
 
 /*per-50*/
 .per-50.scrolling-wrapper .item {
     width: 50%;
-    padding: 0 10px;
+    padding: 10px 10px;
 }
 /*per-70*/
 .per-70.scrolling-wrapper .item {
     width: 70%;
-    padding: 0 10px;
+    padding: 10px 10px;
 }
 
 /*--------------------------------selection-cards only for cards--------------------------------*/
@@ -255,13 +256,13 @@ header{
     width: 100%;
 }
 .cluster-widget .cluster-row .cluster-col:first-child{
-    padding-right: 1px;
+    padding-right: 2px;
 }
 .cluster-widget .cluster-row .cluster-col:last-child{
-    padding-left: 1px;
+    padding-left: 2px;
 }
 .cluster-widget .cluster-row + .cluster-row{
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 
@@ -464,9 +465,6 @@ header{
 }
 
 .box-link.card-columns{
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
     -webkit-column-gap: 12px;
     -moz-column-gap: 12px;
     column-gap: 20px;

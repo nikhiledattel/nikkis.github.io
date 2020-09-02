@@ -115,6 +115,9 @@ body {
   padding: 0 40px;
   margin: 0px 0 50px;
 }
+.full-height .m-container{
+  margin-top: 50px;
+}
 
 /*--------------------------------sidebar--------------------------------*/
 

@@ -37,7 +37,7 @@ h4 {
   font-size: 21px;
   line-height: 1.5;
   margin-bottom: 28px;
-  /*letter-spacing: -0.08px;*/
+  letter-spacing: 0.01px;
 }
 h5 {
   font-size: 18px;
@@ -422,7 +422,6 @@ header{
 
     }
     .in-detail .fw-image-cover{
-        margin-bottom: 24px;
     }    
 }
 
@@ -434,6 +433,8 @@ header{
     margin-left:-40px;
     margin-right:-40px;
     padding: 0px 20px;
+    margin-bottom: 30px;
+
 }
 
 

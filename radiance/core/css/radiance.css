@@ -114,6 +114,7 @@ body {
   position: relative;
   padding: 0 40px;
   margin: 0px 0 50px;
+  white-space: initial;
 }
 .full-height .m-container{
   margin-top: 50px;

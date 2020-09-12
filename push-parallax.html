@@ -26,140 +26,14 @@
 
 		<div class="d-flex justify-content-center first-cont">
 
-			<!-- <div class="m-container" style="padding :0px"> -->
-
-        <style type="text/css">
-.view-port {
-  position: relative;
-  width: 100%;
-  min-height: calc(100vh - 30px);
-  display: block;
-  white-space: nowrap;
-  word-spacing: 0;
-  font-size: 0;
-  overflow: hidden;
-  overflow-y: auto;
-}
-.view-port > * {
-  font-size: initial;
-}
-.view-port .navbar {
-  border-radius: 0;
-  padding-left: 0;
-  margin-bottom: 0;
-  border-left: 0;
-  display: table;
-  width: 100%;
-  top: 0;
-  border-top: 0;
-}
-.view-port .navbar .navbar-inner {
-  display: table-cell;
-  height: 50px;
-  vertical-align: middle;
-}
-.view-port .navbar .action {
-  position: absolute;
-  top: 0;
-  line-height: 50px;
-  z-index: 1;
-}
-.view-port .navbar .action.pull-right {
-  right: 0;
-}
-.view-port .navbar .view-heading {
-  font-size: 15px;
-  text-align: center;
-}
-.view-port .navbar > p {
-  line-height: 12px;
-  font-size: 12px;
-  margin: 0;
-}
-.view-port .navbar.navbar-sm {
-  min-height: 35px;
-}
-.view-port .navbar.navbar-sm .navbar-inner {
-  height: 35px;
-}
-.view-port .navbar.navbar-sm .action {
-  line-height: 35px;
-}
-.view-port .view {
-  display: inline-block;
-  width: 100%;
-  height: calc(100vh - 30px);
-  vertical-align: top;
-  /*-webkit-backface-visibility: hidden;*/
-  /*-moz-backface-visibility: hidden;*/
-  /*backface-visibility: hidden;*/
-  -webkit-perspective: 1000;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  overflow-y: auto;
-}
-.view-port .view:first-child:before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-  z-index: -1;
-}
-.view-port .view:only-child {
-  margin: 0;
-}
-.view-port.from-top > .view:last-child {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate(-100%, 0);
-}
-.view-port.push > .view:first-child {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate(-100%, 0);
-}
-.view-port.push > .view:last-child {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate(-100%, 0);
-}
-.view-port.push-parrallax > .view:first-child {
-  -webkit-transition: all 400ms cubic-bezier(0.1, 0.7, 0.1, 1);
-  transition: all 400ms cubic-bezier(0.1, 0.7, 0.1, 1);
-  -webkit-transform: translate3d(-25%, 0, 0);
-  transform: translate3d(-25%, 0, 0);
-  -ms-transform: translate(-25%, 0);
-}
-.view-port.push-parrallax > .view:first-child:before {
-  opacity: 0;
-  z-index: 100;
-}
-.view-port.push-parrallax > .view:last-child {
-  -webkit-transition: all 400ms cubic-bezier(0.1, 0.7, 0.1, 1);
-  transition: all 400ms cubic-bezier(0.1, 0.7, 0.1, 1);
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate(-100%, 0);
-  /*box-shadow: 0 0 9px rgba(191, 191, 191, 0.36);*/
-}
-        </style>
-
-
 			<div class="view-port clearfix" id="chat">
-			  <div class="view bg-white">
+			  <div class="view to-view-2 bg-white">
 			    <div data-init-list-viewd="ioslist" class="list-view boreded no-top-border">
 			      <div class="m-container">
 
 				<h3>Architecture</h3>
 				<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt labore.</p>
-				<!-- <div class="normalize-container">
-					<img class="img-fluid rounded" src="themes/images/elizeu-dias-613494-unsplash.jpg">
-				</div> -->
 
 				<h4>Architecture 1</h4>
 				<div class="normalize-container">
@@ -168,14 +42,15 @@
 		            </a>
 				</div>
 
-
 				<h4>Landscaping</h4>
 
 				<div class="normalize-container">
-					<div class="scrolling-wrapper per-50">
+					<div class="scrolling-wrapper per-50">						
 				  		<div class="item">
-				  			<img class="thumbnail rounded img-fluid" src="themes/images/esther-town-492626-unsplash (1).jpg">
-				  			<div class="desc">wisdom is all what we need in life</div>
+				  			<a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="ht" href="#" categorylink="simple-centered">
+					  			<img class="thumbnail rounded img-fluid" src="themes/images/esther-town-492626-unsplash (1).jpg">
+					  			<div class="desc">wisdom is all what we need in life</div>
+							</a>				  			
 						</div>
 				  		<div class="item">
 				  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
@@ -194,10 +69,8 @@
 
 				<h4>Landscaping</h4>
 
-
 				<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua dolro.</p>
-
 		          	<div>
 			            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="" href="#">
 							link 2
@@ -206,35 +79,36 @@
 			      </div>
 			    </div>
 			  </div>
-			  <div class="view chat-view bg-white clearfix">
+
+			  <!-- Sub View -->
+			  <div class="view to-view-3 chat-view bg-white clearfix">
 			    <div class="view chat-view bg-white clearfix" id="subView1">
-			      <div class="view-port clearfix" id="nestedView">
-			        
+			      <div class="view-port clearfix" id="nestedView">			        
+			        <!-- sub view 1 -->
 			        <div class="view chat-view bg-white clearfix">
 			          <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
 			            <i class="pg-arrow_left"><</i>
 			          </a>
+			          <div class="ct"></div>
 			          <a data-view-animation="push-parrallax" data-view-port="#nestedView" data-navigate="view" class="" href="#">
 			            <p class="p-l-10 col-xs-height col-middle col-xs-12 text-master">
 			              Go Further Hello
 			            </p>
 			          </a>
 			        </div>
-
+					<!-- sub view 2 -->
 			        <div class="view chat-view bg-white clearfix">
 			          <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#nestedView" data-view-animation="push-parrallax">
 			            <i class="pg-arrow_left"><</i>
 			          </a>
+			          <div>content</div>
+
 			        </div>
 
 			      </div>
 			    </div>
 			  </div>
 			</div>
-
-
-
-			<!-- </div> -->
 		</div>
 	
 
@@ -316,9 +190,6 @@
     <script type="text/javascript">
 
 
-/* ============================================================
- * Pages Mobile View
- * ============================================================ */
 (function($) {
     'use strict';
 
@@ -333,7 +204,7 @@
             var toView = data.toggleView;
             if (data.toggleView != null) {
                 el.children().last().children('.view').hide();
-                $(data.toggleView).show();
+                $(data.toggleView).show();                
             }
             else{
                  toView = el.last();
@@ -350,7 +221,8 @@
 
     $.fn.pgMobileViews.defaults = {
         //Returns Target View & Animation Type
-        onNavigate: function(view, animation) {}
+        onNavigate: function(view, animation) {            
+        }
     }
     // MOBILE VIEW DATA API
     //===================
@@ -361,7 +233,24 @@
             $mobileView.pgMobileViews();
         })
     });
-})(window.jQuery);
+	})(window.jQuery);
+
+
+	$('.to-view-2 a[data-view-animation="push-parrallax"]').on('click', function(){
+		var link = $(this).attr("categorylink");
+		//console.log(link);
+		$.ajax({
+	        url: $(this).attr("categorylink")+'.html',
+	        type: 'GET',
+	        //data: yourData,
+	        datatype: 'html',
+	        success: function (data) { 
+	        	$('.ct').innerHtml(data);
+	        },
+	        error: function (jqXHR, textStatus, errorThrown) { console.log('Sorry! Things didn\'t work as expected'); }
+	    });			
+	})
+	
 
 
     </script>

@@ -100,10 +100,10 @@ body {
 /*content with footer and header delclaration in body*/
 
 .has-header .content{
-    padding-top: 50px;
+    /*padding-top: 50px;*/
 }
 .has-footer .content{
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
 }
 
 
@@ -131,13 +131,25 @@ body {
 .logo-bar{
     padding: 11px 0;
     background: linear-gradient(to top, rgba(255,255,255,0),54%, rgba(255,255,255,1));
-    height: 50px;
+    height: 60px;    
 }
 .logo-bar .m-logo{
     height: 28px;
     text-align: center;
     display: block;
     margin: auto;
+}
+
+/*back button*/
+.letsgoback{
+    background-color: #fff;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-left: 40px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 38px;   
 }
 
 

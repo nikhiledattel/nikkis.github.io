@@ -89,10 +89,10 @@
 			<div class="view to-view-3 chat-view bg-white clearfix"><!-- sub view -->
 				<div class="view chat-view bg-white clearfix" id="subView1">
 					<div class="view-port clearfix" id="nestedView">			        			        
-						<div class="view chat-view bg-white clearfix"><!-- sub view 1 -->
+						<div class="view chat-view bg-white clearfix" id="sub-view-1-content"><!-- sub view 1 -->
 							loading
 						</div><!-- sub view 1 end-->
-						<div class="view chat-view bg-white clearfix"><!-- sub view 2 -->
+						<div class="view chat-view bg-white clearfix" id="sub-view-2-content"><!-- sub view 2 -->
 						  <div>content</div>
 						</div><!-- sub view 2 end -->
 					</div>
@@ -226,7 +226,7 @@
 			        //data: yourData,
 			        datatype: 'html',
 			        success: function (data) { 
-			        	$('.ct').html(data);
+			        	$('#sub-view-1-content').html(data);
 			        },
 			        error: function (jqXHR, textStatus, errorThrown) { console.log('Sorry! Things didn\'t work as expected'); }
 			    });			

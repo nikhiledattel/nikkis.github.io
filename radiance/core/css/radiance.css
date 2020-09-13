@@ -113,7 +113,7 @@ body {
   width: 100%;
   position: relative;
   padding: 0 40px;
-  margin: 0px 0 50px;
+  margin: 0px 0 80px;
   white-space: initial;
 }
 .full-height .m-container{
@@ -144,8 +144,8 @@ body {
 .letsgoback{
     background-color: #fff;
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 38px;
+    width: 38px;
     margin-left: 40px;
     vertical-align: middle;
     text-align: center;
@@ -164,7 +164,7 @@ body {
 }
 .family .child .link{
     display: block;
-    padding: 7px 15px;
+    padding: 7px 10px;
     text-decoration: none;
 }
 
@@ -192,7 +192,7 @@ body {
 /*overall-height - 50px*/
 .family.scroll-with-center-align{
     overflow: auto;
-    padding: 6px 22px;
+    padding: 6px 30px;
     white-space: nowrap;
     text-align: center;
     margin: auto;

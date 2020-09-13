@@ -17,149 +17,128 @@
 	    <header>
 			<div class="fixed-top">
 				<div class="logo-bar">
-				    <a class="link" id="one" href="#">
-				    	<!-- <img class="m-logo" src="themes/images/nikkis-logo.png"> -->
-				    </a>			  
+				    <!-- <a class="link" id="one" href="#">
+				    	<img class="m-logo" src="themes/images/nikkis-logo.png">
+				    </a> -->
+				    <!-- <div class="letsgoback">
+				    	<img height="25px" src="themes/images/icons/icons8-left-100.png">	
+				    </div> -->
+					<a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+	                    back to first
+	                </a>
+				      <span>|</span>
+					<a data-view-animation="push-parrallax" data-view-port="#nestedView" data-navigate="view" class="" href="#">
+                          Go to 3rd
+                    </a>
+					<span>|</span>
+                  <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#nestedView" data-view-animation="push-parrallax">
+                    back to 2nd 
+                  </a>
 				</div>
 			</div>
 	  	</header>
 
-		<div class="d-flex justify-content-center first-cont">
-
-			<div class="view-port clearfix" id="chat">
-			  <div class="view to-view-2 bg-white">
+		<div class="view-port clearfix" id="chat">			  
+		  	<div class="view to-view-2 bg-white">
 			    <div data-init-list-viewd="ioslist" class="list-view boreded no-top-border">
-			      <div class="m-container">
-
-				<h3>Architecture</h3>
-				<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt labore.</p>
-
-				<h4>Architecture 1</h4>
-				<div class="normalize-container">
-		            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="" href="#">
-			        	<img class="img-fluid rounded" src="themes/images/elizeu-dias-613494-unsplash.jpg">
-		            </a>
-				</div>
-
-				<h4>Landscaping</h4>
-
-				<div class="normalize-container">
-					<div class="scrolling-wrapper per-50">						
-				  		<div class="item">
-				  			<a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="ht" href="#" categorylink="simple-centered">
-					  			<img class="thumbnail rounded img-fluid" src="themes/images/esther-town-492626-unsplash (1).jpg">
-					  			<div class="desc">wisdom is all what we need in life</div>
-							</a>				  			
-						</div>
-				  		<div class="item">
-				  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
-				  			<div class="desc">wisdom is all what we need in life</div>
-						</div>
-				  		<div class="item">
-				  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
-				  			<div class="desc">wisdom is all what we need in life. This is s good way to starat with Glory to God always Amen</div>
-						</div>
-				  		<div class="item">
-				  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
-				  			<div class="desc">wisdom is all what we need in life</div>
-						</div>
-					</div>
-				</div>
-
-				<h4>Landscaping</h4>
-
-				<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua dolro.</p>
-		          	<div>
-			            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="" href="#">
-							link 2
-			            </a>
-		            </div>
-			      </div>
-			    </div>
-			  </div>
-
-			  <!-- Sub View -->
-			  <div class="view to-view-3 chat-view bg-white clearfix">
-			    <div class="view chat-view bg-white clearfix" id="subView1">
-			      <div class="view-port clearfix" id="nestedView">			        
-			        <!-- sub view 1 -->
-			        <div class="view chat-view bg-white clearfix">
-			          <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
-			            <i class="pg-arrow_left"><</i>
-			          </a>
-			          <div class="ct"></div>
-			          <a data-view-animation="push-parrallax" data-view-port="#nestedView" data-navigate="view" class="" href="#">
-			            <p class="p-l-10 col-xs-height col-middle col-xs-12 text-master">
-			              Go Further Hello
-			            </p>
-			          </a>
-			        </div>
-					<!-- sub view 2 -->
-			        <div class="view chat-view bg-white clearfix">
-			          <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#nestedView" data-view-animation="push-parrallax">
-			            <i class="pg-arrow_left"><</i>
-			          </a>
-			          <div>content</div>
-
-			        </div>
-
-			      </div>
-			    </div>
-			  </div>
-			</div>
-		</div>
-	
-
-		<!-- Modal -->
-
-		<div class="modal fade align-items-center slide-from-below" id="menu-modal" tabindex="-1" role="dialog" data-backdrop="true" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog jumbo-container" role="document">
-		    <div class="modal-content">				
-				<div class="d-flexs selector flex-wrap align-content-center justify-content-center" content="one">
-					<h4>Wonderful to start with 1</h4>
-					<div class="scrolling-wrapper">
-						<div class="item">
-							<div class="sidebar">
-								<ul class="nav flex-column">
-								  <li class="nav-item">
-								    <a class="nav-link" href="#">This is it, so far!</a>
-								  </li>
-								  <li class="nav-item">	
-								    <a class="nav-link" href="#">My work</a>
-								  </li>		  
-								  <li class="nav-item">
-								    <a class="nav-link" href="#">What's in the </a>
-								  </li>
-								</ul>
+			    	<div class="d-flex justify-content-center first-cont">
+						<div class="m-container">
+							<h3>Architecture</h3>
+							<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt labore.</p>
+							<h4>Architecture 1</h4>
+							<div class="normalize-container">
+							    <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="" href="#">
+							    	<img class="img-fluid rounded" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+							    </a>
+							</div>
+							<h4>Landscaping</h4>
+							<div class="normalize-container">
+								<div class="scrolling-wrapper per-50">						
+							  		<div class="item">
+							  			<a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="ht" href="#" newcontent="simple-centered">
+								  			<img class="thumbnail rounded img-fluid" src="themes/images/esther-town-492626-unsplash (1).jpg">
+								  			<div class="desc">wisdom is all what we need in life</div>
+										</a>				  			
+									</div>
+							  		<div class="item">
+							  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+							  			<div class="desc">wisdom is all what we need in life</div>
+									</div>
+							  		<div class="item">
+							  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+							  			<div class="desc">wisdom is all what we need in life. This is s good way to starat with Glory to God always Amen</div>
+									</div>
+							  		<div class="item">
+							  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+							  			<div class="desc">wisdom is all what we need in life</div>
+									</div>
+								</div>
+							</div>
+							<h4>Landscaping</h4>
+							<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua dolro.</p>
+								<div>		          		
+							    <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="" href="#">
+									link 2
+							    </a>
 							</div>
 						</div>
-				  		<div class="item">
-				  			<div class="title">wisdom is all what we need in life</div>
-				  			<img class="thumbnail img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
-						</div>
-				  		<div class="item">
-				  			<div class="title">wisdom is all what we need in life</div>
-				  			<img class="thumbnail img-fluid" src="themes/images/esther-town-492626-unsplash (1).jpg">
-						</div>
-					</div>
+			  		</div>
 			    </div>
-				<div class="d-flexs selector flex-wrap align-content-center justify-content-center" content="two">
-					<h4>something here is all 2</h4>
-					<div class="scrolling-wrapper">
-				  		<div class="item">
-				  			<div class="title">wisdom is all what we need in life</div>
-				  			<img class="thumbnail img-fluid" src="themes/images/esther-town-492626-unsplash (1).jpg">
-						</div>
-				  		<div class="item">
-				  			<div class="title">wisdom is all what we need in life</div>
-				  			<img class="thumbnail img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
-						</div>
-					</div>
-			    </div>			    
-		    </div>  	
-		  </div>
+		  	</div>			  
+			<div class="view to-view-3 chat-view bg-white clearfix"><!-- Sub View -->
+				<div class="view chat-view bg-white clearfix" id="subView1">
+				  <div class="view-port clearfix" id="nestedView">			        			        
+				    <div class="view chat-view bg-white clearfix"><!-- sub view 1 -->
+				    	<div class="d-flex justify-content-center first-cont">
+							<div class="m-container">
+								<h3>Architecture</h3>
+								<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt labore.</p>
+								<h4>Architecture 1</h4>
+								<div class="normalize-container">
+								    <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="" href="#">
+								    	<img class="img-fluid rounded" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+								    </a>
+								</div>
+								<h4>Landscaping</h4>
+								<div class="normalize-container">
+									<div class="scrolling-wrapper per-50">						
+								  		<div class="item">
+								  			<a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" class="ht" href="#" newcontent="simple-centered">
+									  			<img class="thumbnail rounded img-fluid" src="themes/images/esther-town-492626-unsplash (1).jpg">
+									  			<div class="desc">wisdom is all what we need in life</div>
+											</a>				  			
+										</div>
+								  		<div class="item">
+								  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+								  			<div class="desc">wisdom is all what we need in life</div>
+										</div>
+								  		<div class="item">
+								  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+								  			<div class="desc">wisdom is all what we need in life. This is s good way to starat with Glory to God always Amen</div>
+										</div>
+								  		<div class="item">
+								  			<img class="thumbnail rounded img-fluid" src="themes/images/elizeu-dias-613494-unsplash.jpg">
+								  			<div class="desc">wisdom is all what we need in life</div>
+										</div>
+									</div>
+								</div>
+								<h4>Landscaping</h4>
+								<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua dolro.</p>
+									<div>		          		
+								</div>
+							</div>
+				  		</div>
+				    </div>
+				    <div class="view chat-view bg-white clearfix"><!-- sub view 2 -->
+				      <div>content</div>
+				    </div>
+				  </div>
+				</div>
+			</div>
 		</div>
 
 	    <footer>
@@ -236,20 +215,19 @@
 	})(window.jQuery);
 
 
-	$('.to-view-2 a[data-view-animation="push-parrallax"]').on('click', function(){
-		var link = $(this).attr("categorylink");
-		//console.log(link);
-		$.ajax({
-	        url: $(this).attr("categorylink")+'.html',
-	        type: 'GET',
-	        //data: yourData,
-	        datatype: 'html',
-	        success: function (data) { 
-	        	$('.ct').html(data);
-	        },
-	        error: function (jqXHR, textStatus, errorThrown) { console.log('Sorry! Things didn\'t work as expected'); }
-	    });			
-	})
+	// $('.to-view-2 a[data-view-animation="push-parrallax"]').on('click', function(){
+	// 	var link = $(this).attr("newcontent");
+	// 	$.ajax({
+	//         url: $(this).attr("newcontent")+'.html',
+	//         type: 'GET',
+	//         //data: yourData,
+	//         datatype: 'html',
+	//         success: function (data) { 
+	//         	$('.ct').html(data);
+	//         },
+	//         error: function (jqXHR, textStatus, errorThrown) { console.log('Sorry! Things didn\'t work as expected'); }
+	//     });			
+	// })
 	
 
 

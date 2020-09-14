@@ -1,7 +1,10 @@
 					
-<link rel="stylesheet" href="radiance/plugins/dist/css/pilpil.min.css">
 
-					<div class="d-flex justify-content-center first-cont"><!--page content -->
+	<!-- <body> -->
+
+	<link rel="stylesheet" href="radiance/plugins/dist/css/pilpil.min.css">
+
+					<div class="d-flex justify-content-center first-cont view2-load-only-visbile"><!--page content -->
 						<div class="m-container">
 							<h3>Architecture</h3>
 							<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -9,7 +12,7 @@
 							<h5>Landscaping</h5>
 							<div class="normalize-container">
 								<a data-view-animation="push-parrallax" data-view-port="#nestedView" data-navigate="view" class="" href="#">
-					                <figure class="graf-figure">
+					                <figure class="graf-figure rounded">
 					                  <div class="aspectRatioPlaceholder">
 					                    <div class="aspectRatioPlaceholder-fill"></div>
 					                    <div class="progressiveMedia" data-width="3820" data-height="2762">
@@ -48,5 +51,12 @@
 						</div>
 					</div><!--page content end -->
 
-    
+	<!-- </body>     -->
+
+    <script type="text/javascript">        
+		(function() {
+			document.getElementsByClassName("view2-load-only-visbile")[0].style.visibility = "visible";
+		})();
+	</script>
     <script src="radiance/plugins/dist/js/pilpil.min.js"></script>
+

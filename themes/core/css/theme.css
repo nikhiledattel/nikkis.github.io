@@ -97,6 +97,7 @@ header{
 .rounded{
     border-radius: .5rem!important;
     overflow: hidden;
+    background-color: #f7f7f7;
 }
 .rounded-top{
     border-top-left-radius: .5rem!important;
@@ -109,6 +110,32 @@ header{
 .img-cover{
     object-fit: cover;
 }
+
+
+/*image sizes presets*/
+
+.img-s1{
+    height: 300px;
+    /*background-color: #f7f7f7;*/
+}
+.img-s2{
+    height: 180px;
+    /*background-color: #f7f7f7;*/
+}
+.img-s3{
+    height: 340px;
+    /*background-color: #f7f7f7;*/
+}
+
+/*Page loading Parms*/
+
+.default-load-only-visbile,
+.view2-load-only-visbile
+.view3-load-only-visbile{
+    visibility: hidden;
+}
+
+
 
 
 /*Full page carousel with carousel based navigation*/

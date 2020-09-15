@@ -129,6 +129,7 @@ header{
 
 /*Page loading Parms*/
 
+/*not in use now*/
 .default-load-only-visbile,
 .view2-load-only-visbile
 .view3-load-only-visbile{
@@ -651,19 +652,24 @@ html.fp-enabled, .fp-enabled body{
   -ms-transform: translate(-100%, 0);
   /*box-shadow: 0 0 9px rgba(191, 191, 191, 0.36);*/
 }
+
 /*child detail page*/
 .view-container{
-    width: 100%;
-    height: 100%;
+    /*width: 100%;
+    height: 100%;*/
 }
 
 
-
-
-
-
-
-
+.letsgotofirst,
+.letsgotosec{
+    -webkit-transition: visibility 0s ease-out 180ms, opacity 180ms;
+    transition: visibility 0s ease-out 180ms, opacity 180ms;
+    opacity: 1;
+}
+.letsgotofirst.invisible,
+.letsgotosec.invisible{
+    opacity: 0;
+}
 
 
 

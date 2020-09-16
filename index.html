@@ -42,33 +42,6 @@
 
 
 		<style type="text/css">
-		.placeholder {
-		  background-color: #f6f6f6;
-		  background-size: cover;
-		  background-repeat: no-repeat;
-		  position: relative;
-		  overflow: hidden;
-		}
-
-		.placeholder img {
-		  position: absolute;
-		  opacity: 0;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  transition: opacity 1s linear;
-		}
-
-		.placeholder img.loaded {
-		  opacity: 1;
-		}
-
-		.img-small {
-		  filter: blur(50px);
-		  /* this is needed so Safari keeps sharp edges */
-		  transform: scale(1);
-		}	
-
 
 /* progressive image CSS */
 a.progressive {
@@ -76,6 +49,7 @@ a.progressive {
   display: block;
   overflow: hidden;
   outline: none;
+  height: 100%;
 }
 
 a.progressive:not(.replace) {
@@ -88,10 +62,12 @@ a.progressive img {
   max-width: none;
   height: auto;
   border: 0 none;
+  height: 100%;
+  object-fit: cover;
 }
 
 a.progressive img.preview {
-  filter: blur(2vw);
+  filter: blur(1px);
   transform: scale(1);
 }
 
@@ -100,12 +76,16 @@ a.progressive img.reveal {
   left: 0;
   top: 0;
   will-change: transform, opacity;
-  animation: reveal 1s ease-out;
+  animation: reveal 2s ease-out;
 }
 
 @keyframes reveal {
 	0% { transform: scale(1.0); opacity: 0; }
 	100% { transform: scale(1); opacity: 1; }
+}
+
+.img-s1 img{
+	height: 300px;
 }
 
 		</style>
@@ -115,51 +95,36 @@ a.progressive img.reveal {
 			    <div data-init-list-viewd="ioslist" class="list-view boreded no-top-border">
 					<div class="d-flex justify-content-center first-cont"><!--page content -->
 						<div class="m-container">
-							<!-- <h3>Architecture</h3>
+							<h3>Architecture</h3>
 							<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt labore.</p>
-							<h5>Landscaping</h5> -->
-							<div class="normalize-container img-s1">
-    	<a href="" data-srcset="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg 600w" class="primary progressive replace">
-        <img src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" class="preview" alt="palm trees" />
-    </a>								
-								<!-- <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" newcontent="index" class="" href="#">
-									<div class="placeholder img-s1 rounded" data-large="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg">
-									  <img src="https://cdn-images-1.medium.com/freeze/max/27/1*sg-uLNm73whmdOgKlrQdZA.jpeg?q=20" class="img-small img-cover">
-									  <div style="padding-bottom: 66.6%;"></div>
-									</div>
-					            </a> -->
+							<h5>Landscaping</h5>
+							<div class="normalize-container">
+								<div class="img-s1">
+									<a href="#" data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" newcontent="index" data-srcset="https://cdn-images-1.medium.com/max/374/1*sg-uLNm73whmdOgKlrQdZA.jpeg 374w" class="progressive replace rounded">
+								        <img src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" class="preview img-cover img-s1" alt="\" />
+								    </a>
+							    </div>
 							</div>
 							<h5>Landscaping</h5>
 							<div class="normalize-container">
 								<div class="scrolling-wrapper per-70">
 							  		<div class="item">
-							  			<!-- <img class="thumbnail rounded img-fluid img-s2" src="themes/images/esther-town-492626-unsplash (1).jpg"> -->						                
-										<div class="placeholder img-s2 rounded" data-large="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg">
-										  	<img src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" class="img-small img-cover">
-										  	<div style="padding-bottom: 66.6%;"></div>
-										</div>
+							  			<img class="thumbnail rounded img-fluid img-s2" src="themes/images/esther-town-492626-unsplash (1).jpg">
 							  			<div class="desc">wisdom is all what we need in life</div>
 									</div>									
 							  		<div class="item">
-	<a href="" data-srcset="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg 600w" class="primary progressive replace">
-        <img src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" class="preview" alt="palm trees" />
-    </a>
+										<a href="#" data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" newcontent="index" data-srcset="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg 400w" class="progressive replace rounded">
+									        <img src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" class="preview img-cover img-s2" alt="\" />
+									    </a>
 							  			<div class="desc">wisdom is all what we need in life</div>
 									</div>
 							  		<div class="item">
-						                <figure class="graf-figure rounded default-load-only-visbile">
-						                  	<div class="aspectRatioPlaceholder">
-							                    <div class="aspectRatioPlaceholder-fill"></div>
-							                    <div class="progressiveMedia" data-width="3820" data-height="2762">
-							                      	<img class="progressiveMedia-thumbnail img-cover" src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" />
-							                      	<canvas class="progressiveMedia-canvas"></canvas>
-							                      	<img class="progressiveMedia-image img-cover" data-src="https://cdn-images-1.medium.com/max/2000/1*_ASVxMQ2WFospoTZ22MDnw.jpeg" />
-						                    	</div>
-							                  	</div>
-						                </figure>	
+										<a href="#" data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" newcontent="index" data-srcset="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg 400w" class="progressive replace rounded">
+									        <img src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" class="preview img-cover img-s2" alt="\" />
+									    </a>
 							  			<div class="desc">wisdom is all what we need in life</div>
-									</div>																		
+									</div>									
 								</div>
 							</div>
 							<h5>Landscaping</h5>
@@ -346,31 +311,6 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
 }, false);
 
 
-
-		window.onload = function() {
-		  
-		  var placeholder = document.querySelector('.placeholder'),
-		      small = placeholder.querySelector('.img-small')
-		  
-		  // 1: load small image and show it
-		  var img = new Image();
-		  img.src = small.src;
-		  img.onload = function () {
-		   small.classList.add('loaded');
-		  };
-		  
-		  // 2: load large image
-		  var imgLarge = new Image();
-		  imgLarge.src = placeholder.dataset.large; 
-		  imgLarge.onload = function () {
-		    imgLarge.classList.add('loaded');
-		  };
-		  placeholder.appendChild(imgLarge);
-		}
-
-		(function() {
-			// document.getElementsByClassName("default-load-only-visbile")[0].style.visibility = "visible";
-		})();
 
 		(function($) {
 		    'use strict';

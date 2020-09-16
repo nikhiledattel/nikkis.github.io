@@ -40,6 +40,36 @@
 
 	  	<div class="loader"></div>
 
+
+		<style type="text/css">
+		.placeholder {
+		  background-color: #f6f6f6;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  position: relative;
+		  overflow: hidden;
+		}
+
+		.placeholder img {
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  transition: opacity 1s linear;
+		}
+
+		.placeholder img.loaded {
+		  opacity: 1;
+		}
+
+		.img-small {
+		  filter: blur(50px);
+		  /* this is needed so Safari keeps sharp edges */
+		  transform: scale(1);
+		}	
+		</style>
+
 		<div class="view-port clearfix" id="chat">			  
 		  	<div class="view"><!--first page view -->
 			    <div data-init-list-viewd="ioslist" class="list-view boreded no-top-border">
@@ -51,17 +81,10 @@
 							<h5>Landscaping</h5>
 							<div class="normalize-container img-s1">
 								<a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" newcontent="index" class="" href="#">
-									<img class="progressiveMedia-thumbnails img-fluid rounded img-cover img-s1" src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" />
-<!-- 					                <figure class="graf-figure rounded img-s1s">
-					                  	<div class="aspectRatioPlaceholder">
-						                    <div class="aspectRatioPlaceholder-fill"></div>
-						                    <div class="progressiveMedia" data-width="300" data-height="300">
-						                      	<img class="progressiveMedia-thumbnail img-covers img-s1s" src="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20" />
-						                      	<canvas class="progressiveMedia-canvas"></canvas>
-						                      	<img class="progressiveMedia-image img-covers img-s1s" data-src="https://cdn-images-1.medium.com/max/2000/1*_ASVxMQ2WFospoTZ22MDnw.jpeg" />
-					                    	</div>
-						                  	</div>
-					                </figure> -->
+									<div class="placeholder rounded" data-large="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg">
+									  <img src="https://cdn-images-1.medium.com/freeze/max/27/1*sg-uLNm73whmdOgKlrQdZA.jpeg?q=20" class="img-small">
+									  <div style="padding-bottom: 66.6%;"></div>
+									</div>
 					            </a>
 							</div>
 							<h5>Landscaping</h5>
@@ -220,6 +243,27 @@
     <script src="themes/core/js/theme.js" type="text/javascript"></script>
     <script type="text/javascript">
         
+		window.onload = function() {
+		  
+		  var placeholder = document.querySelector('.placeholder'),
+		      small = placeholder.querySelector('.img-small')
+		  
+		  // 1: load small image and show it
+		  var img = new Image();
+		  img.src = small.src;
+		  img.onload = function () {
+		   small.classList.add('loaded');
+		  };
+		  
+		  // 2: load large image
+		  var imgLarge = new Image();
+		  imgLarge.src = placeholder.dataset.large; 
+		  imgLarge.onload = function () {
+		    imgLarge.classList.add('loaded');
+		  };
+		  placeholder.appendChild(imgLarge);
+		}
+
 		(function() {
 			// document.getElementsByClassName("default-load-only-visbile")[0].style.visibility = "visible";
 		})();

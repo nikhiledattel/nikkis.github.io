@@ -202,7 +202,11 @@
     <!-- <script src="radiance/core/js/radiance.js" type="text/javascript"></script> -->
     <!-- <script src="themes/core/js/theme.js" type="text/javascript"></script> -->
     <script type="text/javascript">
-        
+
+		(function() {
+			document.getElementsByTagName("BODY")[0].style.visibility = "visible";
+		})();        		    
+
 		// progressive-image.js
 		if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
 
@@ -289,8 +293,6 @@
 
 		(function($) {
 		    'use strict';
-
-		    document.getElementsByTagName("BODY")[0].style.visibility = "visible";
 		    
 		    var MobileView = function(element, options) {
 		        var self = this;

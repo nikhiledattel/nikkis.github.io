@@ -539,7 +539,7 @@ html.fp-enabled, .fp-enabled body{
 .view-port {
   position: relative;
   width: 100%;
-  height: calc(100%);
+  /*height: calc(100%);*/
   display: block;
   white-space: nowrap;
   word-spacing: 0;

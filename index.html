@@ -13,7 +13,7 @@
 	    <link href="themes/core/css/theme.css" rel="stylesheet" type="text/css" media="screen" />
 	</head>
 
-	<body class="" data="" style="visibility:visible;">
+	<body class="" data="" style="visibility: visible;">
 
 	    <header>
 			<div class="fixed-top">
@@ -202,98 +202,99 @@
     <!-- <script src="radiance/core/js/radiance.js" type="text/javascript"></script> -->
     <!-- <script src="themes/core/js/theme.js" type="text/javascript"></script> -->
     <script type="text/javascript">
-
+        
 		(function() {
-			document.getElementsByTagName("BODY")[0].style.visibility = "visible";
-		})();        		    
+			document.getElementsByTagName('body').style.visibility="visible";
+		})();
 
-		// progressive-image.js
-		if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
+// progressive-image.js
+if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
 
-		  // start
-		  var pItem = document.getElementsByClassName('progressive replace'), timer;
-			
-			// document.getElementById('chat').addEventListener('scroll', scroller, false);
-		  window.addEventListener('scroll', scroller, false);
-		  window.addEventListener('resize', scroller, false);
-		  inView();
-
-
-		  // throttled scroll/resize
-		  function scroller(e) {
-				console.log('scroll/resize');
-		    timer = timer || setTimeout(function() {
-		      timer = null;
-		      requestAnimationFrame(inView);
-		    }, 300);	
-		  }
+  // start
+  var pItem = document.getElementsByClassName('progressive replace'), timer;
+	
+	// document.getElementById('chat').addEventListener('scroll', scroller, false);
+  window.addEventListener('scroll', scroller, false);
+  window.addEventListener('resize', scroller, false);
+  inView();
 
 
-		  // image in view?
-		  function inView() {
-
-		    var wT = window.pageYOffset, wB = wT + window.innerHeight, cRect, pT, pB, p = 0;
-		    while (p < pItem.length) {
-
-		      cRect = pItem[p].getBoundingClientRect();
-		      pT = wT + cRect.top;
-		      pB = pT + cRect.height;
-
-		      if (wT < pB && wB > pT) {
-		        loadFullImage(pItem[p]);
-		        pItem[p].classList.remove('replace');
-		      }
-		      else p++;
-		    }
-		  }
+  // throttled scroll/resize
+  function scroller(e) {
+		console.log('scroll/resize');
+    timer = timer || setTimeout(function() {
+      timer = null;
+      requestAnimationFrame(inView);
+    }, 300);	
+  }
 
 
-		  // replace with full image
-		  function loadFullImage(item) {
+  // image in view?
+  function inView() {
 
-		    if (!item || !item.href) return;
+    var wT = window.pageYOffset, wB = wT + window.innerHeight, cRect, pT, pB, p = 0;
+    while (p < pItem.length) {
 
-		    // load image
-		    var img = new Image();
-		    if (item.dataset) {
-		      img.srcset = item.dataset.srcset || '';
-		      img.sizes = item.dataset.sizes || '';
-		    }
-		    img.src = item.href;
-		    img.className = 'reveal';
-		    if (img.complete) addImg();
-		    else img.onload = addImg;
+      cRect = pItem[p].getBoundingClientRect();
+      pT = wT + cRect.top;
+      pB = pT + cRect.height;
 
-		    // replace image
-		    function addImg() {
+      if (wT < pB && wB > pT) {
+        loadFullImage(pItem[p]);
+        pItem[p].classList.remove('replace');
+      }
+      else p++;
 
-		      // disable click
-		      item.addEventListener('click', function(e) { e.preventDefault(); }, false);
+    }
 
-		      // add full image
-		      item.appendChild(img).addEventListener('animationend', function(e) {
+  }
 
-		        // remove preview image
-		        var pImg = item.querySelector && item.querySelector('img.preview');
-		        if (pImg) {
-		          e.target.alt = pImg.alt || '';
-		          item.removeChild(pImg);
-		          e.target.classList.remove('reveal');
-		        }
 
-		      });
+  // replace with full image
+  function loadFullImage(item) {
 
-		    }
+    if (!item || !item.href) return;
 
-		  }
+    // load image
+    var img = new Image();
+    if (item.dataset) {
+      img.srcset = item.dataset.srcset || '';
+      img.sizes = item.dataset.sizes || '';
+    }
+    img.src = item.href;
+    img.className = 'reveal';
+    if (img.complete) addImg();
+    else img.onload = addImg;
 
-		}, false);
+    // replace image
+    function addImg() {
+
+      // disable click
+      item.addEventListener('click', function(e) { e.preventDefault(); }, false);
+
+      // add full image
+      item.appendChild(img).addEventListener('animationend', function(e) {
+
+        // remove preview image
+        var pImg = item.querySelector && item.querySelector('img.preview');
+        if (pImg) {
+          e.target.alt = pImg.alt || '';
+          item.removeChild(pImg);
+          e.target.classList.remove('reveal');
+        }
+
+      });
+
+    }
+
+  }
+
+}, false);
 
 
 
 		(function($) {
 		    'use strict';
-		    
 		    var MobileView = function(element, options) {
 		        var self = this;
 		        self.options = $.extend(true, {}, $.fn.pgMobileViews.defaults, options);

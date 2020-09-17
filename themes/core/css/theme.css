@@ -98,7 +98,7 @@ header{
 .rounded{
     border-radius: .5rem!important;
     overflow: hidden;
-    background-color: #f7f7f7;
+    /*background-color: #f7f7f7;*/
 }
 .rounded-top{
     border-top-left-radius: .5rem!important;
@@ -106,36 +106,42 @@ header{
     overflow: hidden;    
 }
 
-/*cover image*/
+/*Image Properties*/
 
-.img-cover{
+.img-fit-cover{
     object-fit: cover;
 }
 
+/*Image Cover*/
 
-/*image sizes presets*/
+.cover-img-s1 img,
+.cover-img-s2 img,
+.cover-img-s3 img{
+    background-color: #f9f9f9;
+}
+.cover-img-s1 img{
+    height: 260px!important;
+}
+.cover-img-s2 img{
+    height: 180px!important;
+}
+
+/*Image sizes presets*/
 
 .img-s1{
     height: 260px;
-    /*background-color: #f7f7f7;*/
 }
 .img-s2{
     height: 180px;
-    /*background-color: #f7f7f7;*/
 }
 .img-s3{
     height: 340px;
-    /*background-color: #f7f7f7;*/
 }
+
 
 /*Page loading Parms*/
 
-/*not in use now*/
-.default-load-only-visbile,
-.view2-load-only-visbile
-.view3-load-only-visbile{
-    visibility: hidden;
-}
+
 
 
 
@@ -409,7 +415,7 @@ header{
 }
 
 
-
+/*
 .scroll-for-detail{
     position: absolute;
     bottom: 0;
@@ -421,7 +427,7 @@ header{
 .scroll-for-detail > div{
     height: 180px;
     width: 100%;
-}
+}*/
 
 
 
@@ -531,10 +537,45 @@ html.fp-enabled, .fp-enabled body{
 }
 
 
+/* Progressive Loading */
+
+a.progressive {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none;
+  height: 100%;
+}
+a.progressive:not(.replace) {
+  cursor: default;
+}
+a.progressive img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  border: 0 none;
+  height: 100%;
+  object-fit: cover;
+}
+a.progressive img.preview {
+  filter: blur(40px);
+  transform: scale(1);
+}
+a.progressive img.reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+  animation: reveal 1s ease-out;
+}
+@keyframes reveal {
+    0% { transform: scale(1.0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
 
 
+/* Detail Page Loading - Parallax-Push */
 
-/*Parallax-Push*/
 
 .view-port {
   position: relative;
@@ -654,12 +695,7 @@ html.fp-enabled, .fp-enabled body{
   /*box-shadow: 0 0 9px rgba(191, 191, 191, 0.36);*/
 }
 
-/*child detail page*/
-.view-container{
-    /*width: 100%;
-    height: 100%;*/
-}
-
+/*view port back button*/
 
 .letsgotofirst,
 .letsgotosec{

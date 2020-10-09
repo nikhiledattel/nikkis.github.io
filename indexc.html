@@ -12,7 +12,7 @@
 									<h5>Landscaping</h5>
 									<div class="normalize-container">
 										<div class="cover-img-s1 rounded">
-											<a href="https://res.cloudinary.com/oworks/image/upload/f_auto/v1593762372/pimage/iceland" data-srcset="https://res.cloudinary.com/oworks/image/upload/f_auto,c_scale,w_400/v1593762372/pimage/iceland 400w, https://res.cloudinary.com/oworks/image/upload/f_auto,c_scale,w_800/v1593762372/pimage/iceland 800w" data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" newcontent="index" class="primary progressive replace hasdetail">
+											<a href="https://res.cloudinary.com/oworks/image/upload/f_auto/v1593762372/pimage/iceland" data-srcset="https://res.cloudinary.com/oworks/image/upload/f_auto,c_scale,w_400/v1593762372/pimage/iceland 400w, https://res.cloudinary.com/oworks/image/upload/f_auto,c_scale,w_800/v1593762372/pimage/iceland 800w" data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" data-toggle-view="#subView1" newcontent="template" class="primary progressive replace hasdetail">
 											    <img src="https://res.cloudinary.com/oworks/image/upload/f_auto,c_scale,w_32/v1593762372/pimage/iceland" class="preview img-cover img-s1" loading="eager" alt="Iceland" />
 										    </a>
 									    </div>
@@ -81,7 +81,7 @@
 		$('a[data-view-animation="push-parrallax"]').on('click', function(){
 			var link = $(this).attr("newcontent");
 			$.ajax({
-		        url: $(this).attr("newcontent")+'c.html',
+		        url: $(this).attr("newcontent")+'.html',
 		        type: 'GET',
 		        //data: yourData,
 		        datatype: 'html',

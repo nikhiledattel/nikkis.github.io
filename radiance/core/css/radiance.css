@@ -144,14 +144,14 @@ body {
 .letsgoback{
     background-color: #fff;
     border-radius: 50%;
-    height: 38px;
-    width: 38px;
+    height: 36px;
+    width: 36px;
     margin: 15px 0 0 40px;
     vertical-align: middle;
     text-align: center;
-    line-height: 38px;
+    line-height: 34px;
+    display: block;
 }
-
 
 
 /*family - utilities with list */

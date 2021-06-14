@@ -1,56 +1,60 @@
 
 $(document).ready(function(){
 		
-	var transend = "webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend";
+	// Modals
+	//1. fade-in
+	
+	var fadeinmodal = $("#fade-in");
+	var prev_link = null;	
+	$('.bottom-navbar .child a').click(function(e){
+		e.preventDefault();
+		// if($(e.target) != prev_link){}
+		// display content
+		var current_link = $(e.target).attr("data");
+		fadeinmodal.modal('show');
+		// preventDefaultv_link = $(e.target);
+	})
+	$('.fade-in .back-link').click(function(e){
+		e.preventDefault();
+		fadeinmodal.removeClass('show');
+		setTimeout(function(){
+			fadeinmodal.modal('hide');
+		},500);	
+	});
 
-	// navigation menu bottom
-
-	var menu_item = $('.bottom-navbar .child > a');
-	var prev_link = null;
-	var current_link = null;
-	var menumodal = $('#menu-modal');
-	var modal_content = $('.modal-content');
-	var active_modals_content = null;
-
-	menu_item.on('click', function(e){
-		
-// .modal.slide-from-below
-
-		current_link = $(e.target).attr("id");
-		active_modals_content = ".selector[content="+$(e.target).attr("id")+"]";
-
-		if(!$('body').hasClass('modal-open'))
-		{	
-			$('body').toggleClass('menu-modal');
-			modal_content.children(active_modals_content).show();
-			menumodal.modal('show');
-			modalopacity(current_link);
-		}
-		else if ($(e.target).attr("id") != prev_link)
-		{
-			//console.log("different and "+$(e.target).attr("id"));
-			modal_content.children().not(active_modals_content).css('opacity',0).hide();
-			modal_content.children(active_modals_content).css('opacity',1).show();
-		}
-		else{			
-			menumodal.modal('hide');
-			$('body').toggleClass('menu-modal');
-		}
-
-		prev_link = $(e.target).attr("id");
-
-		//hidden state
-		menumodal.on('hidden.bs.modal', function (e) {
-			modal_content.children().css('opacity',0).hide();
-		});
-		//content 
-		function modalopacity(current_link){
-			menumodal.on('shown.bs.modal', function (e) {
-				modal_content.children(".selector[content="+current_link+"]").css('opacity',1);
-			});			
-		}		
+	//2. slide-from-right
+	
+	var slidefromrightobject = $("#slide-from-right");
+	$('.detaillateral').click(function(e){
+		e.preventDefault();
+		var content = $("#"+$(this).attr("cont")).clone();
+		console.log($("#"+content).clone());
+		slidefromrightobject.find('.modal-content').html(content);
+		slidefromrightobject.modal('show');
+	})
+	$('.letsgoback').click(function(e){
+		e.preventDefault();
+		slidefromrightobject.removeClass('show');
+		setTimeout(function(){
+			slidefromrightobject.modal('hide');
+		},850);	
 	});
 	
+	slidefromrightobject.on('hidden.bs.modal', function (e) {
+		//clear data
+	});
+	
+  	var navigatorsProperties=['OTransitionEnd','webkitTransitionEnd', 'transitionend'];
+	for (var i in navigatorsProperties) {
+	    document.querySelector('.modal-dialog').addEventListener(navigatorsProperties[i],function()
+	    {	        
+          console.log(' transition end');
+          // display content
+	    },false);
+	}	
+
+
+
 
 	// dynamically adding pages for flickity
 	
@@ -60,32 +64,8 @@ $(document).ready(function(){
 	  	wrapAround: true
 	});
 
-	// //mouse wheel based flickty trigger
-	
-	// var left = 0, right = 0, i=0;
 
-	// carousel.on('mousewheel', function(e) {	    
 
-	// 	// console.log("i "+i++);
-
-	//     if (e.deltaY>0) {
-	//     	left++;
-	//     	if(left>40){
-	//     		left = 1;
-	//     	}
-	//     	if(left == 1)
- //    		carousel.flickity('next');
-	//     } else {
-	//     	right++;
-	//     	if(right>40){
-	//     		right = 1;
-	//     	}	    	
-	//     	if(right == 1)
- //    		carousel.flickity('previous');
-	//     }
-	// });
-
-	// //finish mouse wheel trigger
 
 
 
@@ -152,22 +132,78 @@ $(document).ready(function(){
 
 
 
-	// zoominmodal
 
-	var zoominmodal = $('.zoom-in');
-	
-	// zoominmodal.on('shown.bs.modal', function (e) {
-	//   	$(this).children('.modal-dialog').addClass('shown');	
+}) //document ready
+
+	// Rellax
+
+	// var rellax = new Rellax('.rellax-center', {
+	// 	center: true
+	// });
+	// var rellaxNonCentered = new Rellax('.rellax', {
+	// 	center: false,
+	// });
+
+
+	// Detail Page loading - Parallax Push and Slide
+
+	// (function($) {
+	//     'use strict';
+
+	    var MobileView = function(element, options) {
+	        var self = this;
+	        self.options = $.extend(true, {}, $.fn.pgMobileViews.defaults, options);
+	        self.element = $(element);
+	        self.element.on('click', function(e) {
+	            e.preventDefault();
+	            var data = self.element.data();
+	            var el = $(data.viewPort);
+	            var toView = data.toggleView;
+	            if (data.toggleView != null) {
+	                el.children().last().children('.view').hide();
+	                $(data.toggleView).show();                
+	            }
+	            else{
+	                 toView = el.last();
+	            }
+	            el.toggleClass(data.viewAnimation);
+	            self.options.onNavigate(toView, data.viewAnimation);
+	            return false;
+	        })
+	        return this; // enable chaining
+	    };
+	    $.fn.pgMobileViews = function(options) {
+	        return new MobileView(this, options);
+	    };
+
+	    $.fn.pgMobileViews.defaults = {
+	        //Returns Target View & Animation Type
+	        onNavigate: function(view, animation) {            
+	        }
+	    }
+	    // MOBILE VIEW DATA API
+	    //===================
+
+	    $(window).on('load', function() {	    	
+	        $('[data-navigate="view"]').each(function() {
+	            var $mobileView = $(this)
+	            $mobileView.pgMobileViews();
+	        })
+	    });
+	// })(window.jQuery);
+
+
+	// $('.to-view-2 a[data-view-animation="push-parrallax"]').on('click', function(){
+	// 	var link = $(this).attr("newcontent");
+	// 	$.ajax({
+	//         url: $(this).attr("newcontent")+'.html',
+	//         type: 'GET',
+	//         //data: yourData,
+	//         datatype: 'html',
+	//         success: function (data) { 
+	//         	$('.ct').html(data);
+	//         },
+	//         error: function (jqXHR, textStatus, errorThrown) { console.log('Sorry! Things didn\'t work as expected'); }
+	//     });			
 	// })
-	$(document).on('keyup',function(evt) {
-	    if (evt.keyCode == 27) {
-		    // $('.zoom-in').modal('hide');		    	    	
-			// zoominmodal.children('.modal-dialog').removeClass('shown');				
-		}
-		zoominmodal.children('.modal-dialog').one(transend, function(e) {
-		    // $('.zoom-in').modal('hide');		    
-		});
-	});
 
-
-})

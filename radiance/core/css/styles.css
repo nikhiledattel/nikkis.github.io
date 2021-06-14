@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 
 /*
@@ -253,6 +253,14 @@ button.link-type:focus{
 	background-color: #FAFAFA;
 }
 
+
+
+/*text-alignment*/
+.text-center{
+  text-align: center;
+}
+
+
 /*flex-orientations*/
 
 .content-center-container{
@@ -269,6 +277,8 @@ button.link-type:focus{
   -ms-flex-positive: 1;
   flex-grow: 1;  
 }
+
+
 
 
 
